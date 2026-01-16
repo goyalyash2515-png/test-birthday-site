@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test Website</title>
+  <title>Song Test</title>
 </head>
-<body style="text-align:center; margin-top:50px;">
 
-  <h1 id="text">Website Loaded ✅</h1>
+<body style="text-align:center; margin-top:60px;">
 
-  <button onclick="testClick()">Click Me</button>
+  <h1>Song Test Page 🎶</h1>
+
+  <audio id="music">
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <button onclick="playSong()" style="padding:15px 25px;font-size:16px;">
+    ▶ Play Song
+  </button>
 
   <script>
-    function testClick(){
-      document.getElementById("text").innerText =
-        "Button Click Working 🎉";
-      alert("JS working perfectly");
+    function playSong(){
+      document.getElementById("music").play();
+      alert("Song play command executed");
     }
   </script>
 
